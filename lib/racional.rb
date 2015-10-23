@@ -14,6 +14,27 @@ class Fraccion
 	    end
 	end
 
+	#Funcion para imprimir un numero racional
+	def to_s
+		if @b == 1 #Si el denominador es 1, solo se imprimer el numerador
+			"#{@a}"
+		elsif @b == -1 #En el caso de que b=-1 y a>0 ó a=-1
+			if @a>0 || @a==-1
+				"#{-@a}"
+			else #Si b=-1 y a es menor que cero, imprime el valor de a
+				"#{@a}"
+			end
+		elsif (@a>0 && @b>0 && @b!=1) #Caso nomal, a y b son mayores que cero, imprime a/b
+			"#{@a}/#{@b}"
+		elsif (@a>0 && @b<0 && @b!=-1) # b es menor que cero, se le cambia el signo a todo para que se imprima: -a/b
+			"#{-@a}/#{-@b}"
+		elsif (@a<0 && @b<0 && @b!=-1) # a y b son menor que cero, se le cambia el signo a todo para que imprima a/b
+			"#{-@a}/#{-@b}"
+		elsif (@a<0 && @b>0 && @b!=1) # a es menor que cero, se imprime igual: -a/b
+			"#{@a}/#{@b}"
+		end	
+	end
+
 	
 
 end
