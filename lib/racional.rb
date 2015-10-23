@@ -1,18 +1,20 @@
-class Racional
-  attr_reader :x, :y
-  def initialize(x, y)
-    @x, @y = x, y
-  end
-  def to_s
-    "(#{@x},#{@y})"
-  end
-  def *(value)
-    Point.new(@x * value, @y * value)
-  end
-  def -@
-    Point.new(@x * -1, @y * -1)
-  end
-  def + (other)
-    Point.new(@x + other. x, @y + other.y)
-  end
+require "./gcd.rb"
+
+class Fraccion
+	attr_reader :a, :b
+	
+	#Constructor
+	def initialize(a, b)
+		mcd = gcd(a, b) 	
+    @a = a/mcd
+	    if b != 0
+	      @b = b/mcd
+	    else
+	      raise ArgumentError , 'ERROR: El denominador no puede ser 0.'
+	    end
+	end
+
+	
+
 end
+
