@@ -40,6 +40,12 @@ class Fraccion
 		result = Fraccion.new(@a*d + @b*c, @b*d)	
 	end
 
+	#Funcion para Resta.
+	def resta(c, d) 
+		result = Fraccion.new(@a*d - @b*c, @b*d)	
+	end
+
+	
 
 end
 
