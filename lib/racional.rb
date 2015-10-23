@@ -1,4 +1,4 @@
-require "./gcd.rb"
+require "/home/jose/LPP/LPP_prct05/lib/gcd.rb"
 
 class Fraccion
 	attr_reader :a, :b
