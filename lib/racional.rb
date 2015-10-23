@@ -35,7 +35,11 @@ class Fraccion
 		end	
 	end
 
-	
+	#Funcion para Sumar.
+	def suma(c, d) 
+		result = Fraccion.new(@a*d + @b*c, @b*d)	
+	end
+
 
 end
 
