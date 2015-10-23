@@ -33,6 +33,10 @@ class Test_Fraccion < Test::Unit::TestCase
 		assert_equal("0", Fraccion.new(0,-5).mult(1,2).to_s)
 		assert_equal("0", Fraccion.new(5,-5).mult(0,2).to_s)
 		assert_equal("0", Fraccion.new(-5,-5).mult(0,2).to_s)
+		#Con la Division
+		assert_equal("5/3", Fraccion.new(2,3).div(2,5).to_s)
+		assert_equal("-1", Fraccion.new(25,5).div(-10,2).to_s)
+		assert_equal("-1", Fraccion.new(-25,5).div(10,2).to_s)
 	end
 
 	#Test para controlar el Error cuando el denominador=0

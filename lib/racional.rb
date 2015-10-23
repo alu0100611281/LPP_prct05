@@ -50,7 +50,10 @@ class Fraccion
 		result = Fraccion.new(@a*c, @b*d)	
 	end
 
-	
+	#Funcion para Dividir
+	def div(c, d)
+		result = Fraccion.new(@a*d , @b*c)
+	end
 
 end
 
