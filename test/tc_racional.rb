@@ -1,24 +1,13 @@
-require 'lib/racional'
+require 'lib/racional.rb'
 require 'test/unit'
 
-class TestRacional < Test::Unit::TestCase
-  def setup
-    @origen = Racional.new(0,0)
-    @unidad = Racional.new(1,1)
-  end
-  def tear_down
-    # nothing
-  end
-  def test_simple
-    assert_equal("(0,0)", @origen.to_s)
-    assert_equal("(5,5)", (@unidad*5).to_s)
-    assert_equal("(-1,-1)", (-@unidad).to_s)
-    assert_equal("(1,1)", (@origen + @unidad).to_s)
-  end
-  def test_type_check
-    assert_raise(RuntimeError) {Racional.new('1','1')}
-  end
-  def test_failure
-    assert_equal("(5,5)", (@origen * 5).to_s, "Producto escalar")
-  end
+class Test_Fraccion < Test::Unit::TestCase
+	
+	#Test de prueba
+	def test_probando
+		assert_equal("2/3", Fraccion.new(2,3).to_s)
+		assert_equal("1", Fraccion.new(3,3).to_s)
+	end
+
+	
 end
