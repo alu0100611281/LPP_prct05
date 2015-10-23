@@ -45,6 +45,11 @@ class Fraccion
 		result = Fraccion.new(@a*d - @b*c, @b*d)	
 	end
 
+	#Funcion para Multiplicar
+	def mult(c, d)
+		result = Fraccion.new(@a*c, @b*d)	
+	end
+
 	
 
 end

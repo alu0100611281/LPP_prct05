@@ -17,6 +17,22 @@ class Test_Fraccion < Test::Unit::TestCase
 		#Con la Resta
 		assert_equal("-4/3", Fraccion.new(2,3).resta(4,2).to_s)
 		assert_equal("-3", Fraccion.new(-4,2).resta(2,2).to_s)
+		#Con la Multiplicacion
+		#Se comprueban todas las posibilidades
+		assert_equal("4/15", Fraccion.new(2,3).mult(2,5).to_s)
+		assert_equal("-2/5", Fraccion.new(1,1).mult(-2,5).to_s)
+		assert_equal("1", Fraccion.new(5,5).mult(1,1).to_s)
+		assert_equal("-1", Fraccion.new(-5,5).mult(1,1).to_s)
+		assert_equal("-1", Fraccion.new(5,-5).mult(1,1).to_s)
+		assert_equal("1", Fraccion.new(-5,-5).mult(1,1).to_s)
+		assert_equal("1/2", Fraccion.new(5,5).mult(1,2).to_s)
+		assert_equal("-1/2", Fraccion.new(-5,5).mult(1,2).to_s)
+		assert_equal("-1/2", Fraccion.new(5,-5).mult(1,2).to_s)
+		assert_equal("1/2", Fraccion.new(-5,-5).mult(1,2).to_s)
+		assert_equal("0", Fraccion.new(0,5).mult(1,2).to_s)
+		assert_equal("0", Fraccion.new(0,-5).mult(1,2).to_s)
+		assert_equal("0", Fraccion.new(5,-5).mult(0,2).to_s)
+		assert_equal("0", Fraccion.new(-5,-5).mult(0,2).to_s)
 	end
 
 	#Test para controlar el Error cuando el denominador=0
